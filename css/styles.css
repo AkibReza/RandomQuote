@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 body {
-  background-color: rgb(58, 193, 98);
+  background: url("./1247375.jpg") no-repeat;
+  background-size: 100%;
   color: white;
-  font-family: "Playfair Display", serif;
+  font-family: "Roboto", serif;
   padding: 5px;
 }
 
@@ -29,14 +30,14 @@ h1 {
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 15px 0;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(23, 194, 52, 0.75);
   border-radius: 4px;
-  border: 2px solid rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(248, 238, 238, 0.897);
   transition: 0.5s;
 }
 
 .load-quote:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(23, 194, 52, 0.6);
 }
 
 .load-quote:focus {
@@ -133,8 +134,8 @@ h1 {
 
   .container {
     padding: 25px 25px 15px 55px;
-    background: rgba(0, 0, 0, 0.1);
-    border-left: 5px solid rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.541);
+    border-left: 5px solid rgba(241, 235, 235, 0.678);
     border-radius: 0 4px 4px 0;
   }
 
