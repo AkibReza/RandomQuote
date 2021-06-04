@@ -16,12 +16,11 @@ const quotes = [
     quote: "There is only one good, knowledge, and one evil, ignorance.",
     source: "Socrates",
     citation: "Philosophy",
-    year: "399 BC",
   },
   {
     quote: "I dream my painting and I paint my dream.",
     source: "Vincent Van Gogh",
-    citation: "Art",
+
     year: 1890,
   },
   {
@@ -39,7 +38,7 @@ const quotes = [
   {
     quote: "Peace begins with a smile.",
     source: "Mother Teresa",
-    citation: "Spirituality",
+
     year: 1997,
   },
   {
@@ -60,7 +59,6 @@ const quotes = [
     quote: "It does not matter how slowly you go as long as you do not stop.",
     source: "Confucius",
     citation: "Philosophy",
-    year: "479 BC",
   },
   {
     quote: "It always seems impossible until it's done.",
@@ -74,7 +72,7 @@ const quotes = [
  * `getRandomQuote` function
  ***/
 const getRandomQuote = (array) => {
-  let rng = Math.ceil(Math.random() * array.length);
+  let rng = Math.floor(Math.random() * array.length);
   return array[rng];
 };
 
@@ -87,7 +85,17 @@ const printQuote = () => {
   quote = document.querySelector(".quote");
   quote.innerHTML = selectedQuote.quote;
   source = document.querySelector(".source");
-  source.innerHTML = `${selectedQuote.source}, ${selectedQuote.citation}, ${selectedQuote.year}`;
+  source.innerHTML = `${selectedQuote.source}`;
+  if (
+    selectedQuote.citation !== undefined &&
+    selectedQuote.year !== undefined
+  ) {
+    source.innerHTML = `${selectedQuote.source}, ${selectedQuote.citation}, ${selectedQuote.year}`;
+  } else if (selectedQuote.citation !== undefined) {
+    source.innerHTML = `${selectedQuote.source}, ${selectedQuote.citation}`;
+  } else {
+    source.innerHTML = `${selectedQuote.source}, ${selectedQuote.year}`;
+  }
 };
 
 /***
