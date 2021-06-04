@@ -71,6 +71,8 @@ const quotes = [
 /***
  * `getRandomQuote` function
  ***/
+
+//Generation a random quote
 const getRandomQuote = (array) => {
   let rng = Math.floor(Math.random() * array.length);
   return array[rng];
@@ -81,11 +83,15 @@ const getRandomQuote = (array) => {
  ***/
 
 const printQuote = () => {
+  //Storing random quote in a variable
   selectedQuote = getRandomQuote(quotes);
+
+  //Changing HTML with the randomly generated quote
   quote = document.querySelector(".quote");
   quote.innerHTML = selectedQuote.quote;
   source = document.querySelector(".source");
   source.innerHTML = `${selectedQuote.source}`;
+  //Conditions for citation and year
   if (
     selectedQuote.citation !== undefined &&
     selectedQuote.year !== undefined
@@ -102,5 +108,6 @@ const printQuote = () => {
  * click event listener for the print quote button
  ***/
 
+// Clicking on this button triggers printQuote function
 const button = document.getElementById("load-quote");
 button.addEventListener("click", printQuote);
