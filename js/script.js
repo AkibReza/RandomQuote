@@ -11,16 +11,17 @@ const quotes = [
     source: "Mahatma Gandhi",
     citation: "Philosophy",
     year: 1947,
+    tag: "Motivation",
   },
   {
     quote: "There is only one good, knowledge, and one evil, ignorance.",
     source: "Socrates",
     citation: "Philosophy",
+    tag: "Inspiration",
   },
   {
     quote: "I dream my painting and I paint my dream.",
     source: "Vincent Van Gogh",
-
     year: 1890,
   },
   {
@@ -28,18 +29,20 @@ const quotes = [
     source: "Mark Twain",
     citation: "Literature",
     year: 1910,
+    tag: "Motivation",
   },
   {
     quote: "We are all in the gutter, but some of us are looking at the stars.",
     source: "Oscar Wilde",
     citation: "Lady Windermere's Fan",
     year: 1900,
+    tag: "Inspiration",
   },
   {
     quote: "Peace begins with a smile.",
     source: "Mother Teresa",
-
     year: 1997,
+    tag: "Inspiration",
   },
   {
     quote:
@@ -47,6 +50,7 @@ const quotes = [
     source: "Leo Tolstoy",
     citation: "Philosophy",
     year: 1910,
+    tag: "Motivation",
   },
   {
     quote:
@@ -59,12 +63,14 @@ const quotes = [
     quote: "It does not matter how slowly you go as long as you do not stop.",
     source: "Confucius",
     citation: "Philosophy",
+    tag: "Motivation",
   },
   {
     quote: "It always seems impossible until it's done.",
     source: "Nelson Mandela",
     citation: "Social Science",
     year: 2013,
+    tag: "Motivation",
   },
 ];
 
@@ -102,6 +108,15 @@ const printQuote = () => {
   } else {
     source.innerHTML = `${selectedQuote.source}, ${selectedQuote.year}`;
   }
+  quoteButton();
+};
+
+//Random background color changing function
+
+const quoteButton = () => {
+  let randomNum = () => Math.floor(Math.random() * 255);
+  btn = document.querySelector("button");
+  btn.style.backgroundColor = `rgb(${randomNum()},${randomNum()},${randomNum()})`;
 };
 
 /***
