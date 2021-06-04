@@ -129,5 +129,5 @@ button.addEventListener("click", printQuote);
 
 //Automatic quote changing anonymous function
 (function () {
-  setInterval(printQuote, 3000);
+  setInterval(printQuote, 5000);
 })();
