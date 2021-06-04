@@ -111,3 +111,8 @@ const printQuote = () => {
 // Clicking on this button triggers printQuote function
 const button = document.getElementById("load-quote");
 button.addEventListener("click", printQuote);
+
+//Automatic quote changing anonymous function
+(function () {
+  setInterval(printQuote, 3000);
+})();
