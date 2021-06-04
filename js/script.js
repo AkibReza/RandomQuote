@@ -102,11 +102,11 @@ const printQuote = () => {
     selectedQuote.citation !== undefined &&
     selectedQuote.year !== undefined
   ) {
-    source.innerHTML = `${selectedQuote.source}, ${selectedQuote.citation}, ${selectedQuote.year}`;
+    source.innerHTML = ` ${selectedQuote.source}, ${selectedQuote.citation}, ${selectedQuote.year}`;
   } else if (selectedQuote.citation !== undefined) {
-    source.innerHTML = `${selectedQuote.source}, ${selectedQuote.citation}`;
+    source.innerHTML = ` ${selectedQuote.source}, ${selectedQuote.citation}`;
   } else {
-    source.innerHTML = `${selectedQuote.source}, ${selectedQuote.year}`;
+    source.innerHTML = ` ${selectedQuote.source}, ${selectedQuote.year}`;
   }
   quoteButton();
 };
